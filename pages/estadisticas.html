@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulta estadísticas de producción agrícola en Colombia.">
+    <title>Estadísticas | Colombia Productiva</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header class="encabezado">
+        <a href="../index.html" class="logo">
+            <span class="logo-icono">🌱</span>
+            Colombia Productiva
+        </a>
+
+        <nav class="navegacion">
+            <a href="../index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="estadisticas.html" class="activo">Estadísticas</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="catalogo-hero">
+            <span class="etiqueta">DATOS PARA CONOCER EL CAMPO</span>
+
+            <h1>Estadísticas <span>agrícolas</span></h1>
+
+            <p>
+                Consulta información visual sobre los cultivos y la
+                producción agrícola colombiana.
+            </p>
+        </section>
+
+        <section class="seccion">
+            <div class="seccion-titulo">
+                <h2>Panel de estadísticas</h2>
+
+                <p>
+                    Consulta los registros agrícolas de Caldas
+                    publicados en Datos Abiertos Colombia.
+                </p>
+            </div>
+
+            <div class="aviso-estadisticas">
+                <span aria-hidden="true">ℹ️</span>
+                <p>
+                    Los datos se consultan desde una fuente oficial.
+                    La disponibilidad de las estadísticas depende
+                    del servicio de datos.
+                </p>
+            </div>
+
+            <section class="grafica-card">
+                <h2>Producción de café en Manizales</h2>
+
+                <p class="texto-secundario">
+                    Producción registrada en toneladas por año.
+                </p>
+
+                <p id="estado-grafica" class="estado" role="status"
+                   aria-live="polite">
+                    Cargando datos oficiales...
+                </p>
+
+                <div class="grafica-contenedor">
+                    <canvas
+                        id="grafica-produccion"
+                        role="img"
+                        aria-label="Gráfica de producción de café en Manizales por año">
+                        Tu navegador no permite visualizar esta gráfica.
+                    </canvas>
+                </div>
+
+                <p class="nota-datos">
+                    Fuente:
+                    <a
+                        href="https://www.datos.gov.co/resource/qi54-achv.json"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Datos Abiertos Colombia
+                    </a>.
+                    Conjunto de datos de evaluaciones agrícolas
+                    del departamento de Caldas.
+                </p>
+            </section>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>© 2026 Colombia Productiva · Proyecto académico</p>
+        <p>Estadísticas agrícolas en desarrollo.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/graficas.js"></script>
+</body>
+</html>

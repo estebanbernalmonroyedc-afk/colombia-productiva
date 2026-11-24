@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos agrícolas | Colombia Productiva</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <a href="../index.html" class="logo">
+            <span class="logo-icono">🌱</span>
+            Colombia Productiva
+        </a>
+
+        <nav class="navegacion">
+            <a href="../index.html">Inicio</a>
+            <a href="productos.html" class="activo">Productos</a>
+            <a href="estadisticas.html">Estadísticas</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="catalogo-hero">
+            <span class="etiqueta">RIQUEZA AGRÍCOLA COLOMBIANA</span>
+            <h1>Explora nuestros <span>productos agrícolas</span></h1>
+            <p>
+                Descubre cultivos representativos de Colombia y explora
+                sus características y categorías.
+            </p>
+        </section>
+
+        <section class="seccion catalogo">
+            <div class="buscador">
+                <label for="buscar-producto">Buscar producto</label>
+                <input
+                    type="search"
+                    id="buscar-producto"
+                    placeholder="Ej. café, arroz, banano..."
+                >
+
+                <label for="filtro-categoria">Categoría</label>
+                <select id="filtro-categoria">
+                    <option value="todos">Todas las categorías</option>
+                    <option value="frutas">Frutas</option>
+                    <option value="cereales">Cereales</option>
+                    <option value="otros">Otros cultivos</option>
+                </select>
+            </div>
+
+            <p id="contador-productos" class="contador-productos"></p>
+
+            <div id="catalogo-productos" class="productos-grid"></div>
+
+            <p id="sin-resultados" class="sin-resultados" hidden>
+                No encontramos productos que coincidan con tu búsqueda.
+            </p>
+
+            <p class="nota-datos">
+                Catálogo demostrativo de productos agrícolas. Las tarjetas
+                no representan cifras oficiales de producción.
+            </p>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>© 2026 Colombia Productiva · Proyecto académico</p>
+        <p>Información agrícola en desarrollo.</p>
+    </footer>
+
+    <script src="../js/productos.js"></script>
+</body>
+</html>

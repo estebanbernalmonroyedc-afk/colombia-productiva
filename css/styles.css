@@ -1,0 +1,604 @@
+
+:root {
+    --verde: #176b45;
+    --verde-oscuro: #104d33;
+    --verde-claro: #e9f5ec;
+    --fondo: #f7f8f4;
+    --texto: #1d2b23;
+    --gris: #68746c;
+    --blanco: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 7%;
+    background: var(--blanco);
+    border-bottom: 1px solid #e5eae5;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--verde-oscuro);
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.logo-icono {
+    font-size: 28px;
+}
+
+.navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.navegacion a {
+    color: var(--gris);
+    font-weight: 600;
+}
+
+.navegacion a:hover,
+.navegacion a.activo {
+    color: var(--verde);
+}
+
+.hero {
+    min-height: 440px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 40px;
+    padding: 75px 9%;
+    color: var(--blanco);
+    background:
+        radial-gradient(circle at 85% 20%, #5e9b66 0, transparent 30%),
+        linear-gradient(125deg, #104d33, #176b45 65%, #2e8052);
+}
+
+.hero-contenido {
+    max-width: 650px;
+}
+
+.etiqueta {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #9bd9a7;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.12;
+}
+
+.hero h1 span {
+    color: #b5ed9d;
+}
+
+.hero-contenido > p {
+    max-width: 530px;
+    margin-bottom: 28px;
+    color: #e0eee3;
+    font-size: 17px;
+}
+
+.hero-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.boton:hover {
+    transform: translateY(-2px);
+}
+
+.boton-principal {
+    background: #b5ed9d;
+    color: #173c27;
+}
+
+.boton-secundario {
+    border-color: #a6c9ad;
+    color: var(--blanco);
+}
+
+.hero-visual {
+    display: flex;
+    min-height: 240px;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 24px;
+    border: 1px solid #ffffff30;
+    border-radius: 24px;
+    background:
+        linear-gradient(160deg, #ffffff0a, #ffffff25),
+        radial-gradient(ellipse at center, #c5e8a940, transparent 70%);
+}
+
+.tarjeta-flotante {
+    display: flex;
+    width: 100%;
+    max-width: 340px;
+    align-items: center;
+    gap: 14px;
+    padding: 18px;
+    border: 1px solid #ffffff50;
+    border-radius: 14px;
+    background: #ffffffee;
+    color: var(--texto);
+}
+
+.tarjeta-flotante > span {
+    font-size: 35px;
+}
+
+.tarjeta-flotante p {
+    color: var(--gris);
+    font-size: 13px;
+}
+
+.seccion {
+    padding: 65px 9%;
+}
+
+.seccion-titulo {
+    margin-bottom: 28px;
+}
+
+.seccion-titulo .etiqueta,
+.llamada .etiqueta {
+    color: var(--verde);
+}
+
+.seccion h2 {
+    margin-bottom: 8px;
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.25;
+}
+
+.seccion-titulo p,
+.llamada p {
+    color: var(--gris);
+}
+
+.resumen {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.resumen-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 22px;
+    border: 1px solid #e6ebe4;
+    border-radius: 14px;
+    background: var(--blanco);
+}
+
+.resumen-icono {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    place-items: center;
+    border-radius: 12px;
+    background: var(--verde-claro);
+    font-size: 25px;
+}
+
+.resumen-card p {
+    color: var(--gris);
+    font-size: 13px;
+}
+
+.resumen-card h3 {
+    font-size: 18px;
+}
+
+.estado {
+    margin: 18px 0;
+    color: var(--gris);
+    font-size: 14px;
+}
+
+.departamentos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.departamento-card {
+    padding: 20px;
+    border: 1px solid #e5eae4;
+    border-radius: 12px;
+    background: var(--blanco);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.departamento-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px #173c2710;
+}
+
+.departamento-card span {
+    font-size: 24px;
+}
+
+.departamento-card h3 {
+    margin: 8px 0 4px;
+    font-size: 17px;
+}
+
+.departamento-card p {
+    color: var(--gris);
+    font-size: 13px;
+}
+
+.llamada {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin: 0 9% 60px;
+    padding: 35px;
+    border-radius: 18px;
+    background: var(--verde-claro);
+}
+
+.llamada > div {
+    max-width: 650px;
+}
+
+.llamada p {
+    margin-top: 10px;
+}
+
+.llamada .boton {
+    flex-shrink: 0;
+    background: var(--verde);
+    color: var(--blanco);
+}
+
+.pie {
+    padding: 25px 7%;
+    background: #123b29;
+    color: #e0eee3;
+    text-align: center;
+    font-size: 13px;
+}
+
+.pie p + p {
+    margin-top: 5px;
+    color: #b5cdbb;
+}
+
+@media (max-width: 800px) {
+    .encabezado {
+        flex-direction: column;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 55px 7%;
+    }
+
+    .hero-visual {
+        min-height: 160px;
+    }
+
+    .seccion {
+        padding: 45px 7%;
+    }
+
+    .departamentos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .llamada {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 7% 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navegacion {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .resumen,
+    .departamentos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+}
+
+
+/* Catálogo de productos agrícolas */
+
+.catalogo-hero {
+    padding: 60px 9%;
+    text-align: center;
+    background: linear-gradient(135deg, #e9f5ec, #f7f8f4);
+}
+
+.catalogo-hero .etiqueta {
+    color: var(--verde);
+}
+
+.catalogo-hero h1 {
+    margin-bottom: 15px;
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.2;
+}
+
+.catalogo-hero h1 span {
+    color: var(--verde);
+}
+
+.catalogo-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--gris);
+}
+
+.buscador {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 18px;
+    max-width: 800px;
+    margin-bottom: 25px;
+}
+
+.buscador label {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.buscador input,
+.buscador select {
+    width: 100%;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #dce4dc;
+    border-radius: 8px;
+    background: var(--blanco);
+    color: var(--texto);
+    font: inherit;
+}
+
+.buscador input:focus,
+.buscador select:focus {
+    outline: 2px solid #8cc99a;
+    border-color: var(--verde);
+}
+
+.contador-productos {
+    margin-bottom: 18px;
+    color: var(--gris);
+    font-size: 14px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.producto-card {
+    padding: 24px;
+    border: 1px solid #e5eae4;
+    border-radius: 14px;
+    background: var(--blanco);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.producto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px #173c2712;
+}
+
+.producto-icono {
+    display: grid;
+    height: 115px;
+    margin-bottom: 18px;
+    place-items: center;
+    border-radius: 10px;
+    background: var(--verde-claro);
+    font-size: 55px;
+}
+
+.producto-categoria {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: var(--verde-claro);
+    color: var(--verde-oscuro);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.producto-card h2 {
+    margin-bottom: 8px;
+    font-size: 21px;
+}
+
+.producto-card p {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+.nota-datos {
+    margin-top: 25px;
+    color: var(--gris);
+    font-size: 12px;
+}
+
+.sin-resultados {
+    padding: 25px 0;
+    color: var(--gris);
+}
+
+@media (max-width: 800px) {
+    .productos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .catalogo-hero {
+        padding: 45px 7%;
+    }
+}
+
+@media (max-width: 500px) {
+    .productos-grid,
+    .buscador {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Página de estadísticas */
+
+.aviso-estadisticas {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 25px;
+    padding: 18px;
+    border: 1px solid #d9e7d9;
+    border-radius: 12px;
+    background: #eef6ed;
+}
+
+.aviso-estadisticas span {
+    flex-shrink: 0;
+    font-size: 23px;
+}
+
+.aviso-estadisticas p {
+    color: var(--verde-oscuro);
+}
+
+.grafica-card {
+    width: 100%;
+    padding: 25px;
+    border: 1px solid #e5eae4;
+    border-radius: 14px;
+    background: var(--blanco);
+    box-shadow: 0 4px 16px #173c2708;
+}
+
+.grafica-card h2 {
+    margin-bottom: 8px;
+    color: var(--texto);
+    font-size: 22px;
+}
+
+.texto-secundario {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+.estado {
+    min-height: 24px;
+    margin: 18px 0 10px;
+    color: var(--gris);
+    font-size: 14px;
+}
+
+.grafica-contenedor {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    margin-top: 20px;
+}
+
+.grafica-contenedor canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.nota-datos {
+    margin-top: 20px;
+    color: var(--gris);
+    font-size: 12px;
+}
+
+.nota-datos a {
+    color: var(--verde);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.nota-datos a:hover {
+    color: var(--verde-oscuro);
+}
+
+@media (max-width: 800px) {
+    .grafica-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .grafica-card {
+        padding: 16px;
+    }
+
+    .grafica-contenedor {
+        height: 260px;
+    }
+
+    .aviso-estadisticas {
+        padding: 14px;
+    }
+}

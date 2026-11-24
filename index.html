@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora los productos agrícolas y la diversidad productiva de Colombia.">
+    <title>Colombia Productiva</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+</head>
+<body>
+    <header class="encabezado">
+        <a href="index.html" class="logo">
+            <span class="logo-icono">🌱</span>
+            Colombia Productiva
+        </a>
+
+        <nav class="navegacion">
+            <a href="index.html" class="activo">Inicio</a>
+            <a href="pages/productos.html">Productos</a>
+            <a href="pages/estadisticas.html">Estadísticas</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-contenido">
+                <span class="etiqueta">EL CAMPO COLOMBIANO</span>
+
+                <h1>Descubre lo que<br>produce <span>Colombia.</span></h1>
+
+                <p>
+                    Explora los departamentos, conoce nuestros productos
+                    agrícolas y descubre la riqueza productiva de nuestro país.
+                </p>
+
+                <div class="hero-botones">
+                    <a href="pages/productos.html" class="boton boton-principal">
+                        Explorar productos
+                    </a>
+
+                    <a href="#departamentos" class="boton boton-secundario">
+                        Conocer departamentos
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="tarjeta-flotante">
+                    <span>🌾</span>
+                    <div>
+                        <strong>Riqueza agrícola</strong>
+                        <p>Un país lleno de posibilidades</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion departamentos" id="departamentos">
+            <div class="seccion-titulo">
+                <div>
+                    <span class="etiqueta">EXPLORA EL TERRITORIO</span>
+                    <h2>Los departamentos de Colombia</h2>
+                    <p>Consulta los departamentos disponibles en la API de Colombia.</p>
+                </div>
+            </div>
+
+            <div class="resumen">
+                <article class="resumen-card">
+                    <span class="resumen-icono">🗺️</span>
+                    <div>
+                        <p>Departamentos consultados</p>
+                        <h3 id="total-departamentos">Cargando...</h3>
+                    </div>
+                </article>
+
+                <article class="resumen-card">
+                    <span class="resumen-icono">🌱</span>
+                    <div>
+                        <p>Enfoque</p>
+                        <h3>Producción agrícola</h3>
+                    </div>
+                </article>
+            </div>
+
+            <div id="estado-api" class="estado">
+                Consultando los datos...
+            </div>
+
+            <div id="lista-departamentos" class="departamentos-grid"></div>
+        </section>
+
+        <section class="seccion llamada">
+            <div>
+                <span class="etiqueta">CONOCE NUESTRO CAMPO</span>
+                <h2>Detrás de cada producto hay una región.</h2>
+                <p>
+                    Conoce la diversidad de los territorios colombianos
+                    y la importancia de su actividad productiva.
+                </p>
+            </div>
+
+            <a href="pages/estadisticas.html" class="boton boton-principal">
+                Ver estadísticas
+            </a>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>© 2026 Colombia Productiva · Proyecto académico</p>
+        <p>Datos territoriales consultados mediante API Colombia.</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
